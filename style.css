@@ -1,0 +1,111 @@
+/* Estilos do Banner */
+.banner {
+  background-image: url('caminho-para-sua-imagem-de-fundo.jpg'); /* Substitua pelo URL da sua imagem */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner .lead {
+  font-size: 1.5rem;
+}
+
+.search-job {
+  margin-top: 40px;
+}
+
+.search-job input[type="text"] {
+  width: 70%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.search-job button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Estilos dos Títulos das Seções */
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Estilos dos Parágrafos */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Estilos para os Links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para o Rodapé */
+footer {
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Estilos para a Barra de Navegação */
+.navbar {
+  background-color: #333;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+/* Estilos para o Botão Toggle da Barra de Navegação */
+.navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Estilos para o Menu de Navegação Ativo */
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: bold;
+}
+
+/* Estilos para as Caixas de Serviços */
+.service-box {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box:hover {
+  transform: scale(1.05);
+}

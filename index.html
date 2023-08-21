@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua Pesquisa de Emprego</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos do Banner e outros estilos... */
+    .banner {
+      background-image: url('https://w0.peakpx.com/wallpaper/108/670/HD-wallpaper-black.jpg'); /* Substitua pelo URL da sua imagem */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+    }
+
+    .search-job {
+      margin-top: 20px;
+    }
+
+    .search-job input[type="text"] {
+      width: 70%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-job button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    
+    .display-4 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Pesquisa de Empregos</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">Sobre Nós</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">Nossos Serviços</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfólio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banner de Pesquisa de Empregos -->
+  <section class="banner">
+    <div class="container text-center">
+      <h1 class="display-4">Encontre o Emprego dos Seus Sonhos</h1>
+      <p class="lead">Descubra oportunidades de carreira incríveis que correspondam às suas habilidades e ambições.</p>
+
+      <div class="search-job">
+        <form action="#" method="get">
+          <input type="text" name="q" placeholder="Pesquisar empregos">
+          <button type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Sobre Nós -->
+  <section class="container mt-5">
+    <h2 class="text-center">Sobre Nós</h2>
+  <section class="container mt-5">
+  <p>Nós somos uma equipe apaixonada por conectar talentos a oportunidades de carreira emocionantes em todo o mundo. Combinamos nossa experiência em recrutamento e tecnologia para tornar a busca por empregos eficiente e gratificante.</p>
+  <p>Nossa missão é ajudá-lo a encontrar não apenas empregos, mas oportunidades que se alinhem com suas paixões e habilidades únicas. Junte-se a nós e alcance novas alturas em sua carreira profissional!</p>
+</section>
+
+  <!-- Seção Serviços -->
+  <section class="container mt-5">
+    <h2 class="text-center">Nossos Serviços</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4>Pesquisa Específica</h4>
+            <p>Navegue por empregos em áreas específicas e encontre aqueles que se encaixam perfeitamente no seu perfil.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4>Detalhes Detalhados</h4>
+            <p>Visualize detalhes abrangentes de empregos, incluindo requisitos, responsabilidades e benefícios.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4>Conexões Eficientes</h4>
+            <p>Conecte-se diretamente com empregadores e recrutadores, facilitando o processo de candidatura.</p>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Seção Portfólio -->
+<section id="portfolio" class="container mt-5">
+    <h2 class="text-center section-title">Nosso Portfólio</h2>
+    <div class="row" id="portfolio-list">
+    
+    </div>
+  </section>
+  
+  <script>
+    // Dados de projetos 
+    const projects = [
+      {
+        title: 'Plataforma de Treinamento Profissional',
+        description: 'Desenvolvimento de uma plataforma online para treinamento profissional, oferecendo cursos em várias áreas para ajudar candidatos a melhorar suas habilidades.',
+        url: 'https://www.example.com/treinamento-profissional'
+      },
+      {
+        title: 'Aplicativo de Correspondência de Empregos',
+        description: 'Criação de um aplicativo inovador que utiliza algoritmos avançados para corresponder candidatos a empregos adequados com base em suas habilidades e preferências.',
+        url: 'https://www.example.com/app-correspondencia-empregos'
+      },
+    ];
+  
+    function displayProjects() {
+      const portfolioList = document.getElementById('portfolio-list');
+  
+      projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('col-md-4', 'mb-4');
+  
+        projectCard.innerHTML = `
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">${project.title}</h5>
+              <p class="card-text">${project.description}</p>
+              <a href="${project.url}" target="_blank" class="btn btn-primary">Ver detalhes</a>
+            </div>
+          </div>
+        `;
+  
+        portfolioList.appendChild(projectCard);
+      });
+    }
+  
+    // Chama função para exibir os projetos ao carregar a página
+    displayProjects();
+  </script>
+
+<!-- Seção Contatos -->
+<section id="contacts" class="container mt-5">
+    <h2 class="text-center section-title">Contato</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h4>Entre em Contato</h4>
+        <p>Para obter mais informações ou suporte, entre em contato conosco via WhatsApp:</p>
+        <p><strong>Nome:</strong> Gabriela Brutti<br><strong>Telefone:</strong> <a href="https://wa.me/5511999954323" target="_blank">+55 51 99995-4323</a></p>
+      </div>
+      <div class="col-md-6">
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2023 Site de Pesquisa de Empregos</p>
+    <p>Contato: Gabriela Brutti | Telefone: +55 51 99995-4323 | E-mail: bruttigabriela@gmail.com</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
